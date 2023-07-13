@@ -1,6 +1,6 @@
 {
-  "name": "image-cropper-component",
-  "version": "0.5.1",
+  "name": "img-cropper",
+  "version": "0.0.1",
   "description": "An image cropper web component.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -12,7 +12,7 @@
   "unpkg": "dist/image-cropper-component/image-cropper-component.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tony-xlh/image-cropper-component.git"
+    "url": "https://github.com/Franciscojose05/img-cropper.git"
   },
   "files": [
     "dist/",
