@@ -1,5 +1,5 @@
 {
-  "name": "img-cropper",
+  "name": "img-cropper-normalizer",
   "version": "0.0.1",
   "description": "An image cropper web component.",
   "main": "dist/index.cjs.js",
