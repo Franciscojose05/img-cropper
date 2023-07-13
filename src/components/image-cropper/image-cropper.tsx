@@ -473,7 +473,10 @@ export class ImageCropper {
   }
 
   async initDDN(){
-    window["Dynamsoft"]["DDN"]["DocumentNormalizer"].license = this.license;
+    const ddn = window["Dynamsoft"]["DDN"]["DocumentNormalizer"];
+    if(!ddn){
+      ddn.license = this.license;
+    }
     this.ddn = await window["Dynamsoft"]["DDN"]["DocumentNormalizer"].createInstance();
     this.ddn.maxCvsSideLength = 99999;
   }
