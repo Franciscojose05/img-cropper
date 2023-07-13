@@ -121,11 +121,11 @@ export class ImageCropper {
     return (
       <Fragment>
         {this.handlers.map(index => (
-          <rect 
-            x={this.getHandlerPos(index,"x")} 
-            y={this.getHandlerPos(index,"y")} 
+          <rect
+            x={this.getHandlerPos(index,"x")}
+            y={this.getHandlerPos(index,"y")}
             width={this.getHandlerSize()}
-            height={this.getHandlerSize()} 
+            height={this.getHandlerSize()}
             class="cropper-controls"
             stroke-width={index === this.selectedHandlerIndex ? 4 * this.getRatio() : 2 * this.getRatio()}
             fill="transparent"
@@ -145,18 +145,18 @@ export class ImageCropper {
     return (
       <defs>
         <mask id="myMask">
-          <rect 
-            x="0" 
-            y="0" 
+          <rect
+            x="0"
+            y="0"
             width={this.img ? this.img.naturalWidth : "0"}
             height={this.img ? this.img.naturalHeight : "0"}
             fill="white" />
           {this.handlers.map(index => (
-            <rect 
-              x={this.getHandlerPos(index,"x")} 
-              y={this.getHandlerPos(index,"y")} 
+            <rect
+              x={this.getHandlerPos(index,"x")}
+              y={this.getHandlerPos(index,"y")}
               width={this.getHandlerSize()}
-              height={this.getHandlerSize()} fill="black" 
+              height={this.getHandlerSize()} fill="black"
             />
           ))}
         </mask>
@@ -417,7 +417,7 @@ export class ImageCropper {
         minX = Math.min(point.x,minX);
         minY = Math.min(point.y,minY);
         maxX = Math.max(point.x,maxX);
-        maxY = Math.max(point.y,maxY);  
+        maxY = Math.max(point.y,maxY);
       }
     }
     minX = Math.floor(minX);
@@ -474,7 +474,8 @@ export class ImageCropper {
 
   async initDDN(){
     const ddn = window["Dynamsoft"]["DDN"]["DocumentNormalizer"];
-    if(!ddn){
+    console.log('Fran npm package loaded')
+    if(!ddn.license){
       ddn.license = this.license;
     }
     this.ddn = await window["Dynamsoft"]["DDN"]["DocumentNormalizer"].createInstance();
@@ -493,12 +494,12 @@ export class ImageCropper {
   render() {
     return (
       <Host>
-        <canvas 
+        <canvas
           ref={(el) => this.canvasElement = el as HTMLCanvasElement}
           class="hidden-canvas"
         ></canvas>
-        <svg 
-          version="1.1" 
+        <svg
+          version="1.1"
           ref={(el) => this.svgElement = el as SVGElement}
           class="cropper-svg"
           xmlns="http://www.w3.org/2000/svg"
