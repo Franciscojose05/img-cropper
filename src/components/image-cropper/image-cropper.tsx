@@ -463,6 +463,8 @@ export class ImageCropper {
   @Method()
   async detect(source: string | HTMLImageElement | Blob | HTMLCanvasElement):Promise<DetectedQuadResult[]>
   {
+    console.log('detect called window',window["Dynamsoft"]["DDN"]["DocumentNormalizer"] )
+    console.log('detect called ddn',window["Dynamsoft"]["DDN"]["DocumentNormalizer"] )
     if (window["Dynamsoft"]["DDN"]["DocumentNormalizer"]) {
       if (!this.ddn) {
         await this.initDDN();
