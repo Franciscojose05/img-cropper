@@ -461,6 +461,11 @@ export class ImageCropper {
   }
 
   @Method()
+  check(){
+    console.log('Ich bin Frans Packet')
+  }
+
+  @Method()
   async detect(source: string | HTMLImageElement | Blob | HTMLCanvasElement):Promise<DetectedQuadResult[]>
   {
     console.log('detect called window',window["Dynamsoft"]["DDN"]["DocumentNormalizer"] )
