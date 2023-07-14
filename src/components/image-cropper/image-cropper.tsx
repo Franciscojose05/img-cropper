@@ -461,7 +461,7 @@ export class ImageCropper {
   }
 
   @Method()
-  check(){
+  async check(){
     console.log('Ich bin Frans Packet')
   }
 

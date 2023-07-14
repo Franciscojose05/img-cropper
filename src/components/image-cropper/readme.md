@@ -27,6 +27,16 @@
 
 ## Methods
 
+### `check() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 ### `detect(source: string | HTMLImageElement | Blob | HTMLCanvasElement) => Promise<DetectedQuadResult[]>`
 
 

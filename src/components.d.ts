@@ -11,6 +11,7 @@ export { Point, Quad, Rect } from "./components/image-cropper/image-cropper";
 export { DetectedQuadResult } from "dynamsoft-document-normalizer";
 export namespace Components {
     interface ImageCropper {
+        "check": () => Promise<void>;
         "detect": (source: string | HTMLImageElement | Blob | HTMLCanvasElement) => Promise<DetectedQuadResult[]>;
         "getCroppedImage": (perspectiveTransform?: boolean, colorMode?: "binary" | "gray" | "color") => Promise<string>;
         "getPoints": () => Promise<[Point, Point, Point, Point]>;
