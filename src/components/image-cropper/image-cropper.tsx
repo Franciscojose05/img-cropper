@@ -47,10 +47,12 @@ export class ImageCropper {
 
   @Watch('img')
   watchImgPropHandler(newValue: HTMLImageElement) {
-    console.log('newValue.naturalWidth: ', newValue.naturalWidth)
-    console.log('newValue.naturalHeight: ', newValue.naturalHeight)
     if (newValue) {
+      console.log('newValue.naturalWidth: ', newValue.naturalWidth);
+      console.log('newValue.naturalHeight: ', newValue.naturalHeight);
       this.viewBox = "0 0 "+newValue.naturalWidth+" "+newValue.naturalHeight;
+    } else {
+      this.viewBox = "0 0 1280 720";
     }
   }
 
