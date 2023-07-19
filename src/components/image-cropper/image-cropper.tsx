@@ -342,6 +342,23 @@ export class ImageCropper {
     }
   }
 
+  isTouchDevice() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  }
+
+  getHandlerSize() {
+    let ratio = this.getRatio();
+    let size:number = this.isTouchDevice() ? 44 : 20; // if it's a touch device, make the handlers bigger
+    if (this.handlersize) {
+      try {
+        size = parseInt(this.handlersize);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    return Math.ceil(size*ratio);
+  }
+
   onHandlerTouchStart(e:TouchEvent,index:number) {
     this.usingTouchEvent = true; //Touch events are triggered before mouse events. We can use this to prevent executing mouse events.
     e.stopPropagation();
@@ -351,7 +368,9 @@ export class ImageCropper {
     this.handlerMouseDownPoint.x = coord.x;
     this.handlerMouseDownPoint.y = coord.y;
     this.selectedHandlerIndex = index;
+    e.preventDefault(); // prevent default touch behavior
   }
+
 
   getPointIndexFromHandlerIndex(index:number){
     if (index === 0) {

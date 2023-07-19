@@ -65,3 +65,8 @@
 .hidden-canvas {
   display: none;
 }
+
+.cropper-controls {
+  touch-action: none;
+}
+
