@@ -192,19 +192,6 @@ export class ImageCropper {
     return pos;
   }
 
-  getHandlerSize() {
-    let ratio = this.getRatio();
-    let size:number = 20;
-    if (this.handlersize) {
-      try {
-        size = parseInt(this.handlersize);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    return Math.ceil(size*ratio);
-  }
-
   onSVGTouchStart(e:TouchEvent) {
     if (this.selectedHandlerIndex != -1) {
       let coord = this.getMousePosition(e,this.svgElement);
