@@ -96,12 +96,12 @@ PS: If you need to use Dynamsoft Document Normalizer, please include it in your 
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
-- Run `npm install image-cropper-component --save`
+- Run `npm install img-cropper-component --save`
 - Put a script tag similar to this 
 
    ```html
    <script type="module">
-     import { defineCustomElements } from 'node_modules/image-cropper-component/dist/esm/loader.js';
+     import { defineCustomElements } from 'node_modules/img-cropper-component/dist/esm/loader.js';
      defineCustomElements();
    </script>
    ```
@@ -110,3 +110,7 @@ PS: If you need to use Dynamsoft Document Normalizer, please include it in your 
    
 - Then you can use the element anywhere in your template, JSX, html etc
 
+### Serve, Publish
+
+- npm run start -> serve on localhost:3333
+- change Version in package.json -> npm run build -> npm publish

@@ -53,7 +53,7 @@
       registerEventsForCropper();
     }
 
-    function loadImageFromFile() { 
+    function loadImageFromFile() {
       let files = document.getElementById('file').files;
       if (files.length == 0) {
         return;
@@ -104,7 +104,7 @@
         usingQuad = true;
         document.getElementById("status").innerText = "Detecting...";
         try {
-          quads = await cropper.detect(cropper.img);  
+          quads = await cropper.detect(cropper.img);
         } catch (error) {
           console.log(error);
         }

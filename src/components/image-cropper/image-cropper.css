@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   height: 100%;
-  background: black;
+  background: #F5F5F5;
   --line-color: green;
 }
 
@@ -41,14 +41,12 @@
 }
 
 .accept-use img {
-  width: 2.5em;
   height: 2.5em;
   pointer-events: all;
   cursor:pointer;
 }
 
 .accept-cancel img {
-  width: 2.5em;
   height: 2.5em;
   pointer-events: all;
   cursor:pointer;
