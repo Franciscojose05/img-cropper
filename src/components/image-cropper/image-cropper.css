@@ -14,6 +14,7 @@ svg.cropper-svg {
   justify-content: center;
   overflow: auto;
   align-self: center;
+  max-width:100%;
 }
 
 .cropper-controls {
