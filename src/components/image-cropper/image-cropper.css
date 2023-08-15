@@ -1,28 +1,19 @@
 :host {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   height: 100%;
   background: #F5F5F5;
   --line-color: green;
 }
 
-svg.cropper-svg {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: auto;
-  align-self: center;
-}
-
-
 .cropper-controls {
   stroke:var(--line-color);
 }
 
 .footer {
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   height: 100px;
   width: 100%;
   pointer-events: none;
