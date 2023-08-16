@@ -440,7 +440,7 @@ export class ImageCropper {
   @Method()
   async getCroppedImage(perspectiveTransform?:boolean,colorMode?:"binary"|"gray"|"color"):Promise<string>
   {
-    if (perspectiveTransform && window["Dynamsoft"]["DDN"]) {
+    /*if (perspectiveTransform && window["Dynamsoft"]["DDN"]) {
       if (!this.ddn) {
         await this.initDDN();
       }
@@ -458,7 +458,7 @@ export class ImageCropper {
       let quad = await this.getQuad();
       let normalizedResult = await this.ddn.normalize(this.img,{quad:quad});
       return normalizedResult.image.toCanvas().toDataURL();
-    }else{
+    }else{*/
       let ctx = this.canvasElement.getContext("2d");
       let rect = await this.getRect();
       this.canvasElement.width = rect.width;
@@ -466,7 +466,7 @@ export class ImageCropper {
       ctx.drawImage(this.img, rect.x, rect.y, rect.width, rect.height, 0, 0, rect.width, rect.height);
       return this.canvasElement.toDataURL();
     }
-  }
+  //}
 
   @Method()
   async check(){
