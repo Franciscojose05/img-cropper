@@ -440,6 +440,8 @@ export class ImageCropper {
   @Method()
   async getCroppedImage(perspectiveTransform?:boolean,colorMode?:"binary"|"gray"|"color"):Promise<string>
   {
+    console.log(perspectiveTransform)
+    console.log(colorMode)
     /*if (perspectiveTransform && window["Dynamsoft"]["DDN"]) {
       if (!this.ddn) {
         await this.initDDN();
