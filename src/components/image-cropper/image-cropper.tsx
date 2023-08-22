@@ -131,7 +131,7 @@ export class ImageCropper {
             width={this.getHandlerSize()}
             height={this.getHandlerSize()}
             class="cropper-controls"
-            stroke-width={index === this.selectedHandlerIndex ? 4 * this.getRatio() : 2 * this.getRatio()}
+            stroke-width={index === this.selectedHandlerIndex ? 5 * this.getRatio() : 5 * this.getRatio()}
             fill="transparent"
             onMouseDown={(e:MouseEvent)=>this.onHandlerMouseDown(e,index)}
             onMouseUp={(e:MouseEvent)=>this.onHandlerMouseUp(e)}
@@ -535,7 +535,7 @@ export class ImageCropper {
             mask="url(#myMask)"
             points={this.getPointsData()}
             class="cropper-controls"
-            stroke-width={3 * this.getRatio()}
+            stroke-width={5 * this.getRatio()}
             fill="transparent"
             onMouseDown={(e:MouseEvent)=>this.onPolygonMouseDown(e)}
             onMouseUp={(e:MouseEvent)=>this.onPolygonMouseUp(e)}
